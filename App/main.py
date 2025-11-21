@@ -1,7 +1,7 @@
 import streamlit as st
 import joblib
 import pandas as pd
-from __init__ import TextPreprocessor
+from preprocessing import TextPreprocessor
 
 # Load model and vectorizer
 model = joblib.load("model/model.pkl")
