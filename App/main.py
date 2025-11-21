@@ -2,6 +2,14 @@ import streamlit as st
 import joblib
 import pandas as pd
 from preprocessing import TextPreprocessor
+import sys
+import os
+
+# Add parent directory to Python path so it can find preprocessing.py
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+# Now you can import your classes
+from preprocessing import TextPreprocessor, Explore, Clean
 
 # Load model and vectorizer
 model = joblib.load("model/model.pkl")
